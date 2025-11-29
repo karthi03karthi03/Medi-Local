@@ -1,0 +1,630 @@
+/* General Body & Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  /* Background Image */
+  background-image: url('https://images.unsplash.com/photo-1576091160550-21735c249a0d?q=80&w=2670&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin: 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  padding: 12px 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tabs button.active {
+  color: #1a73e8;
+}
+
+.tabs button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #1a73e8;
+  border-radius: 2px 2px 0 0;
+}
+
+.tabs button:hover:not(.active) {
+  color: #1a73e8;
+}
+
+/* Appointment Filter Tabs */
+.filter-tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-tabs button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-tabs button:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-tabs button.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+}
+
+
+/* Search Bar */
+.search-bar-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border-radius: 50px;
+  background-color: #f0f2f5;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Make PatientDemographics span 2 columns */
+.analytics-card-grid {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns within the card for charts */
+  gap: 20px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.analytics-card-grid h3 {
+    text-align: center;
+    grid-column: span 2; /* Chart titles span both columns */
+}
+.analytics-card-grid .chart-container {
+    padding: 0;
+    margin: 0;
+}
+
+.analytics-card.no-data-state {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-grid .stat-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+/* Stat Card Colors */
+.dashboard-grid .stat-card.blue {
+  background: #e3f2fd;
+}
+.dashboard-grid .stat-card.green {
+  background: #e8f5e9;
+}
+.dashboard-grid .stat-card.blue h2 {
+  color: #2196f3;
+}
+.dashboard-grid .stat-card.green h2 {
+  color: #4caf50;
+}
+
+.dashboard-grid .stat-card h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #1a73e8;
+}
+
+.dashboard-grid .stat-card p {
+  margin: 5px 0 0;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Forms */
+.form label {
+  display: block;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
+}
+
+.form button.submit {
+  background: #1a73e8;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.form button.submit:hover {
+  background: #1565c0;
+}
+
+/* Lists */
+.patient-list, .appointment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.patient-list li, .card.appointments li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.patient-list li:last-child, .card.appointments li:last-child {
+  border-bottom: none;
+}
+
+.patient-list li:hover {
+  background-color: #f8f9fa;
+}
+
+.patient-info, .appointment-info {
+  flex: 1;
+}
+
+.patient-info small, .appointment-info small {
+  color: #777;
+}
+
+/* Icons & Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.edit {
+  color: #ffa000;
+}
+
+.icon.delete {
+  color: #dc3545;
+}
+
+/* Inline Edit Forms */
+.edit-form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.edit-form-inline input, .edit-form-inline select {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 100px;
+}
+
+.edit-form-inline button {
+  padding: 8px 12px;
+}
+
+/* Empty State Messages */
+.no-patients-msg, .no-items-msg {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #856404;
+  margin-top: 20px;
+}
+
+/* Modals */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  animation: modal-fade-in 0.3s forwards;
+}
+
+@keyframes modal-fade-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+.modal-body {
+  line-height: 1.6;
+}
+
+.modal-body p {
+  margin: 0 0 10px;
+}
+
+.history-section h4 {
+  margin-top: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #1a73e8;
+}
+
+.history-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-section li {
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Loader Styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1a73e8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Appointment Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.status-badge.scheduled {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.status-badge.completed {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+.status-badge.canceled {
+  background-color: #fff1f0;
+  color: #ff4d4f;
+}
+
+/* --- Responsive Media Queries (New Feature) --- */
+
+/* Tablet & Mobile (Less than 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .tabs button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Dashboard grid becomes 2 columns on tablets */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* The analytics card now spans full width to fit both charts */
+    .analytics-card-grid {
+        grid-column: span 2;
+        grid-template-columns: 1fr; /* Charts stack vertically on mobile */
+    }
+    
+    .analytics-card-grid h3, .analytics-card-grid .chart-container {
+        grid-column: span 1;
+    }
+
+    /* Stat cards stack better */
+    .dashboard-grid .stat-card {
+        grid-column: span 1;
+        padding: 20px;
+    }
+}
+
+/* Small Mobile (Less than 480px) */
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* All items stack on small mobiles */
+    }
+
+    .analytics-card-grid {
+        grid-template-columns: 1fr; /* Charts stack */
+    }
+
+    .analytics-card-grid h3 {
+        grid-column: span 1;
+    }
+    
+    .filter-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+/* ... (All existing CSS remains the same from the previous update) ... */
+
+/* --- Key Changes to the Demographics Card (The FIX) --- */
+.analytics-card-grid {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.analytics-card-grid .chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* Allows content to shrink */
+}
+
+.analytics-card-grid .chart-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+}
+
+/* This container forces the chart to take a specific height, preventing overflow */
+.analytics-card-grid .chart-inner-container {
+    height: 250px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Fix for the initial 'Patient Demographics' title */
+.analytics-card-grid > h3 {
+    display: none; /* Hide the main component title since we have titles per chart */
+}
+
+/* ... (All other general styles remain the same) ... */
+
+
+/* --- Responsive Media Queries (Improved) --- */
+
+/* Tablet & Mobile (Less than 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    /* Dashboard grid becomes 2 columns on tablets */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* The analytics card now spans full width */
+    .analytics-card-grid {
+        grid-column: span 2;
+        grid-template-columns: 1fr; /* Charts stack vertically on mobile */
+    }
+    
+    .analytics-card-grid .chart-wrapper {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .analytics-card-grid .chart-wrapper:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* Stat cards stack better */
+    .dashboard-grid .stat-card {
+        grid-column: span 1;
+        padding: 20px;
+    }
+}
+
+/* Small Mobile (Less than 480px) */
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* All items stack on small mobiles */
+    }
+    
+    .filter-tabs {
+        flex-wrap: wrap;
+    }
+}

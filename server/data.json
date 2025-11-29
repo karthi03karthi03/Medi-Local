@@ -1,0 +1,35 @@
+{
+  "patients": [
+    {
+      "name": "karthi",
+      "email": "ddd",
+      "phone": "14465446",
+      "age": "254",
+      "notes": "hello",
+      "id": "1758773011751788"
+    }
+  ],
+  "appointments": [
+    {
+      "patientId": "1758714916952714",
+      "patientName": "karthi",
+      "datetime": "2025-09-25T17:25",
+      "reason": "fever",
+      "id": "1758714936176134"
+    },
+    {
+      "patientId": "1758773011751788",
+      "patientName": "karthi",
+      "datetime": "2025-09-26T09:33",
+      "reason": "fever",
+      "id": "1758773030600725"
+    },
+    {
+      "patientId": "1758773011751788",
+      "patientName": "karthi",
+      "datetime": "2025-09-26T12:16",
+      "reason": "headache",
+      "id": "1758782823375567"
+    }
+  ]
+}
