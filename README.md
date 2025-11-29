@@ -64,18 +64,6 @@ Postman
 🏗️ System Architecture
 React UI  →  Node/Express API  →  MySQL Database
 
-📸 Screenshots (Add when ready)
-
-Login / Dashboard
-
-Patient List
-
-Add Patient Form
-
-Appointment Booking Screen
-
-Analytics Dashboard
-
 🎯 Future Enhancements
 
 Role-based login (Admin/Doctor/Receptionist/Patient)
